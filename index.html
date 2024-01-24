@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Form Action</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+    <button id="registerButton" onclick="showRegistrationForm()">Register</button>
+    <button id="registerutton" onclick="showRegistrationF()">Login</button>
+    <div id="registration-container">
+        <h2>Registration</h2>
+        <form action="/submit" id="registrationForm" method="post">
+            <input type="text" id="name" name="name" placeholder="Name" required>
+
+            <input type="email" id="email" name="email" placeholder="Email" required>
+
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+
+            <button type="button" onclick="submitForm()">Register</button>
+        </form>
+    </div>
+    <div id="registration-container1">
+        <h2>LOGIN</h2>
+        <form action="/submit" id="registrationForm" name="submit-to-google-sheet" method="post">
+            <input type="email" id="email" name="Email" placeholder="Email" required>
+
+            <input type="tel" id="phone" name="Phone" placeholder="Phone Number" required>
+
+            <button type="button" onclick="submit()">Login</button>
+        </form>
+    </div>
+</body>
+</html>
