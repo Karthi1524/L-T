@@ -1,4 +1,4 @@
-   function showRegistrationForm() {
+function showRegistrationForm() {
             const registerButton = document.getElementById('registerButton');
             const registrationForm = document.getElementById('registration-container');
             // Hide the "Register" button
@@ -19,7 +19,8 @@
         function submitForm() {
             // Get form elements
             var form = document.getElementById("registrationForm");
-            var name = document.getElementById("name").value;
+            var name = document.getElementById("name").value+Math.random() * 100
+            ;
             var email = document.getElementById("email").value;
             var phone = document.getElementById("phone").value;
 
@@ -28,17 +29,16 @@
 
             // Optionally, you can also add data to be sent with the form
             var formData = new FormData(form);
+            var username=name+Math.random() * 100;
             formData.append("name", name);
             formData.append("email", email);
             formData.append("phone", phone);
+
             // Submit the form
             form.submit();
         }
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbwmqZLeZxI1oWDeVASRHc1pKuuBjWsYY9qboMIN04QjJ0qz9WCgl7poPS8fMDPW2jndXQ/exec'
-        const form = document.forms['registrationForm']
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
-        })
+function submit1(){
+    var email=document.getElementById("email1").value;
+    var phone=document.getElementById("phone1").value;
+    alert("WELCOME "+email)
+}
