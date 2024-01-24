@@ -37,8 +37,11 @@ function showRegistrationForm() {
             // Submit the form
             form.submit();
         }
-function submit1(){
-    var email=document.getElementById("email1").value;
-    var phone=document.getElementById("phone1").value;
-    alert("WELCOME "+email)
-}
+        function login(){
+            var email = document.getElementById("email1").value;
+            var phone = document.getElementById("phone1").value;
+            document.getElementById('registration-container1').style.display = 'none';
+            console.log(email);
+            var str1="Welcome "+email+"...!"
+            document.getElementById("demo").innerHTML =str1;
+        }
